@@ -24,7 +24,8 @@ def get_tracks_from_playlist_name(user_id, playlist_name):
     return
 
 
-def get_artist_id_from_name():
+def get_artist_id_from_name(artist_name: str):
+
     return
 
 
