@@ -79,9 +79,16 @@ def get_attributes_from_track_id_list():
 if __name__ == "__main__":
     sp = connect_to_api()
     uname = "omkwppodx5qi1pph0cwma65zc"
-    playlist_id = get_playlist_id_from_name(uname, "bar jazz")
-    playlist_tracks = get_tracks_from_playlist_id(playlist_id)
-    
+    artist = "cantus"
+    artist_uri = get_artist_id_from_name(artist)
+    artist_tracks = get_tracks_from_artist_id(artist_uri)[0]
+    vuelie_uri = "spotify:track:4EUXx84rwXba2GSRCGnFAJ"
+    analysis = sp.audio_analysis(vuelie_uri)
+    print(analysis.keys())
+    print(len(analysis["segments"]))
+    print(analysis["segments"][0])
+
+
 
 
 
